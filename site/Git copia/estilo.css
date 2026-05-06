@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* O margin é a margem, o padding é o preenchimento e o box-sizing é para o navegador entender que a gente quer que ele conte a largura e altura do elemento incluindo a borda e o preenchimento. */
+}
+body {
+    background-color: #000000;
+    color: #ffffff;
+    /* O background-color é a cor de fundo do site e o color é a cor do texto. */
+    display:flex ;
+    height: 100vh;
+     /* O display:flex é para o navegador entender que a gente quer usar o flexbox para organizar os elementos dentro do body, e o height: 100vh é para o body ocupar toda a altura da tela. */
+}
+
+/* Lembra que a gente colocou uma "etiqueta" nela chamada class="sidebar"? No CSS, quando a gente quer dar ordens para uma class, a gente precisa colocar um ponto final antes do nome dela para o navegador entender que é uma classe. */
+.sidebar {
+    width: 88px;
+    height: 100vh;
+    background-color: #222222;
+}
+.menu-links a {
+
+    color: #e1e1e1; /* O color é a cor do texto dos links, nesse caso, um cinza claro. */
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; /*Coloca o icone em cima e os textos em baixo*/
+    align-items: center; /* Alinha os itens no centro, tanto horizontalmente quanto verticalmente. */
+    gap: 8px; /* O gap é a distância entre os itens, nesse caso, entre o ícone e o texto. */
+    font-size: 11px; /* O font-size é o tamanho da fonte da letra, nesse caso, 11 pixels. */
+    font-family: IBM Plex Mono, monospace; /* O font-family é a família da fonte, nesse caso, a IBM Plex Mono, que é uma fonte monoespaçada, ou seja, cada letra ocupa o mesmo espaço horizontal, dando um visual mais organizado e moderno ao site. */ 
+    /* A cima mudei a fonte da letra e o tamanho. O text-decoration: none é para tirar o sublinhado dos links, deixando eles mais limpos e modernos. */
+    padding: 10px 3px; /* 10px de espaço em cima/embaixo e 3px nas laterais */
+    width: 80px;
+    height: 45px;
+}
+
+/* Mudando o tamanho apenas dos ícones */
+.menu-links a i {
+    font-size: 15px; /* Aumente ou diminua esse número para testar */
+    margin-bottom: px; /* Um espacinho extra entre o ícone e o texto embaixo dele */
+}
+
+.menu-links { 
+
+    display: flex;
+    flex-direction: column; /* Empilha os botões um debaixo do outro */
+    gap: 30px; /* Dá um espaço legal entre um botão e outro */
+    margin-top: 25px; /* Empurra os botões um pouco para baixo, afastando do título DRUW */
+}
+
+.conteudo-principal {
+
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante da tela, empurrando a barra lateral para a esquerda. */
+    height: 100vh; /* Faz o conteúdo principal ocupar toda a altura da tela. */
+    display: flex; /* Permite usar o flexbox para organizar os elementos dentro do conteúdo principal. */
+    flex-direction: column; /* Organiza os elementos dentro do conteúdo principal em uma coluna, ou seja, um embaixo do outro. */
+    justify-content: center; /* Centraliza a logo do mascote pirata verticalmente dentro do conteúdo principal. */
+    align-items: center; /* Centraliza a logo do mascote pirata horizontalmente dentro do conteúdo principal. */
+}
+
+.logo-mascote-pirata {
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+.caixa-pesquisa {
+    display: flex; /* Permite usar o flexbox para organizar os elementos dentro da caixa de pesquisa. */
+    align-items: center; /* Alinha os itens no centro verticalmente, ou seja, o ícone e o campo de texto ficam alinhados. */
+    gap: 15px; /* /* Espaço entre a lupa e onde digita */
+    background-color: #000000; /* Mesma cor do fundo do site para camuflar */
+    padding: 10px 0px 10px 38px; /* Dá um espaço interno na caixa de pesquisa, deixando ela mais confortável para digitar. */
+    border-radius: 10px; /* Deixa os cantos bem redondinhos (estilo pílula) */
+    border: 1px solid #444444; /* Adiciona uma borda cinza escura para destacar a caixa de pesquisa do fundo, mantendo a estética escura do site. */
+    width: 490px; /* Largura da barra de pesquisa */
+
+}
+
+   /* aqui no "input" vamos mudar o estilo do campo de texto onde o usuário vai digitar a pesquisa. O "input" é a tag HTML que representa um campo de entrada de dados, e aqui estamos dizendo que queremos estilizar especificamente os campos de texto dentro da caixa de pesquisa. */
+ .caixa-pesquisa input {
+    background-color: transparent; /* Deixa o fundo invisivel para mostrar a cor da caixa de pesquisa */
+    border: none; /* Arranca a borda original do navegador */
+    color: #e1e1e1; /* Cor do texto digitado, um cinza claro para manter a estética escura do site. */
+    outline: none; /* Remove a borda de foco que os navegadores costumam adicionar quando o campo de texto está ativo, deixando o design mais limpo e moderno. */
+    width: 100%; /* Faz o espaço de digitar esticar até o fim da caixa */
+    font-family: IBM Plex Mono, monospace; /* Mantém a mesma fonte monoespaçada da barra lateral para uma aparência consistente e moderna. */
+    font-size: 12px; /* Tamanho da fonte do texto digitado, um pouco maior que o dos links para facilitar a leitura. */
+}
+/* DEIXANDO A BORDA DE PESQUISA COM A COR BRANCA,Quando alguém clicar para digitar dentro da caixa de pesquisa. */
+.caixa-pesquisa:focus-within {
+    border: 1px solid #ffffff; /* ...a borda da caixa inteira fica branca! */
+}
+
+/* Estilo do parágrafo inteiro */
+.texto-termos {
+    margin-top: 170px; /* Empurra o texto bem para baixo, afastando da barra de pesquisa */
+    font-size: 11px; /* Deixa a letra bem pequenininha */
+    color: #888888; /* Pinta de cinza escuro para não chamar muita atenção */
+    font-family: 'IBM Plex Mono', monospace; /* Mantém a fonte de programador */
+}
+
+/* Estilo APENAS da parte que é um link (o <a> que está dentro do texto-termos) */
+.texto-termos a {
+    color: #888888; /* Mantém o link cinza também */
+    text-decoration: underline; /* Coloca a linha embaixo para mostrar que é clicável */
+    text-decoration-thickness: 1px; /* Deixa a linha do sublinhado bem fininha e elegante */
+}
+
+/* Um brinde extra: quando passar o mouse no link, ele acende! */
+.texto-termos a:hover {
+    color: #ffffff; /* Fica branco no mouse por cima */
+}

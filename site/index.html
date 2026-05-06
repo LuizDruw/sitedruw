@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Para criar o corpo do site digitei (!) e dei enter. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Druw</title> 
+    <link rel="stylesheet" href="style.css">
+    <!-- O título do site é o que aparece na aba do navegador e linkei o arquivo index com o style.css para quando eu mexer nas cores aparece. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- O link acima é para usar os ícones do font-awesome, que são usados para adicionar ícones de redes sociais, como o Instagram, ao site. -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <!-- O link acima é para usar a fonte IBM Plex Mono, que é uma fonte monoespaçada, ou seja, cada letra ocupa o mesmo espaço horizontal, dando um visual mais organizado e moderno ao site. -->
+
+</head>
+
+<body>
+    <!-- A tag aside pense nela como caixas de curiosidades em uma revista, menus secundarios. tu cria um quadradinho só pra ela. -->
+     <!-- O atributo class="Sidebar/barra-lateral":É um nome personalizado escolhido pela pessoa que escreveu o código. -->
+    <aside class="sidebar">
+        <a href="index.html" class="botao-home"><i class="fa-solid fa-house"></i> <span class="mini-titulo">Druw</span></a>
+        
+        <nav class="menu-links">
+
+            <!-- O atributo href="https://www.youtube.com/@Luiz_Druw" é o endereço do link, ou seja, para onde o usuário será direcionado ao clicar no link. O valor "https://www.youtube.com/@Luiz_Druw" é a URL do canal do YouTube de Luiz Druw. O atributo target="_blank" indica que o link deve ser aberto em uma nova aba do navegador, em vez de substituir a página atual. O atributo rel="noopener noreferrer" é uma medida de segurança que impede que a nova página tenha acesso à janela original por meio do objeto window.opener, protegendo contra ataques de phishing e outras vulnerabilidades. O conteúdo dentro da tag <a> é o texto que será exibido como link, e o ícone <i class="fa-brands fa-youtube"></i> é um ícone do YouTube fornecido pela biblioteca Font Awesome, que é usada para representar visualmente o link para o canal do YouTube de Luiz Druw -->
+            <a href="https://www.youtube.com/@Luiz_Druw" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> Youtube </a>
+            <a href="https://github.com/LuizDruw" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Github </a>
+            <a href="https://www.instagram.com/luiz_Druw/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram </a>
+            <a href="https://www.linkedin.com/in/luiz-paulo-silva-de-almeida-71560722a/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> Linkedin </a>
+
+            <a href="#"><i class="fa-solid fa-location-dot"></i> Lugares </a>
+            <a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doações </a>
+            <a href="#"><i class="fa-solid fa-bullhorn"></i> Novidades </a>
+            <a href="#"><i class="fa-solid fa-info-circle"></i> Sobre </a>
+            
+        </nav>
+
+    </aside>
+
+    <main class="conteudo-principal">
+        <img src="/assets/mascot.png" alt="logotipo pirata" class="logo-mascote-pirata">
+
+        <div class="caixa-pesquisa">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cole aqui sua foto">
+
+        </div>
+
+        <p class="texto-termos">Ao continuar, você concorda com <a href="os termos e éticas de uso" target="_blank">os termos e ética de uso</a></p>
+
+    </main>
+
+</body>
+</html>
